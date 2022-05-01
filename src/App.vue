@@ -1,23 +1,42 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
-  </template>
+    <div id="app">
+        <el-container class="app-out-pannel">
+            <el-header class="sys-header">一张图项目系统</el-header>
+            <el-container class="app-content-pannel">
+                <el-aside width="200px" class="sys-menu">左侧菜单</el-aside>
+                <el-main>地图区域</el-main>
+            </el-container>
+        </el-container>
+    </div>
+</template>
 
 <script>
 export default {
-  name: 'App'
-}
+    name: 'App',
+};
 </script>
 
 <style>
-#app{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,
+body,
+#app {
+    position: relatieve;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.app-out-pannel,
+.app-content-pannel {
+    height: 100%;
+}
+.sys-header {
+    background-color: blue;
+    font-size: 60px;
+}
+.sys-menu {
+    background-color: darksalmon;
+    line-height: 40px;
+    color: brown;
+    font-size: 20px;
 }
 </style>
